@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ChiTietSanPham">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarchitietsanpham"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Chi tiết sản phẩm"
+        android:background="#98FFC107"
+        app:titleTextColor="#323030">
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgchitietsp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="150dp"
+            android:layout_height="190dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvtensp"
+                android:text="Tên sản phẩm"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvgiasp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="giá sản phẩm"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_margin="3dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="180dp"
+
+
+                android:background="@drawable/spinner"
+                android:padding="15dp" />
+
+            <Button
+                android:id="@+id/btnthemgiohang"
+                android:background="#A44CAF50"
+                android:textColor="#D31E1D1D"
+                android:textSize="15sp"
+                android:text="Thêm giỏ hàng"
+                android:paddingLeft="15dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#F93478AE"
+            android:text="Mô tả chi tiết sản phẩm"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+
+        <TextView
+            android:id="@+id/tvmotachitietsp"
+            android:textColor="#1B1818"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textSize="20sp"
+            android:textColor="#F93478AE"
+            android:text="Sản phẩm liên quan"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>
